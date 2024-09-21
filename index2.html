@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Süper Lig Forma Satış Mağazası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .team {
+            background-color: white;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .team:hover {
+            transform: scale(1.05);
+        }
+        .team img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .team h2 {
+            margin: 10px 0;
+            color: #4CAF50;
+        }
+        .team p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .team a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .team a:hover {
+            background-color: #45a049;
+        }
+        .cart, .contact {
+            margin: 20px auto;
+            max-width: 900px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .cart table {
+            width: 100%;
+            background-color: white;
+            border-collapse: collapse;
+        }
+        .cart table, .cart th, .cart td {
+            border: 1px solid #ddd;
+        }
+        .cart th, .cart td {
+            padding: 10px;
+            text-align: left;
+        }
+        .cart th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-links {
+            margin: 10px 0;
+        }
+        .footer-links a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Süper Lig Forma Satış Mağazası</h1>
+</header>
+
+<nav>
+    <a href="#">Ana Sayfa</a>
+    <a href="#">Takımlar</a>
+    <a href="#">İletişim</a>
+    <a href="#cart">Sepetim</a>
+</nav>
+
+<div class="container">
+    <!-- Galatasaray -->
+    <div class="team">
+        <img src="https://akn-gsstore.a-cdn.akinoncloud.com/products/2024/07/05/76029/73562fee-ca32-4137-a4cc-9c1bdfc95cb5_size1200x1600.jpg" alt="Galatasaray Forma">
+        <h2>Galatasaray</h2>
+        <p>2024 Sezonu Forma - Home</p>
+        <p>Fiyat: 799 TL</p>
+        <a href="#" class="add-to-cart" data-team="Galatasaray" data-price="799">Sepete Ekle</a>
+    </div>
+
+    <!-- Fenerbahçe -->
+    <div class="team">
+        <img src="https://fenerium.com/Fenerium/media/images/urunler/AT013EES014SR.jpg" alt="Fenerbahçe Forma">
+        <h2>Fenerbahçe</h2>
+        <p>2024 Sezonu Forma - Home</p>
+        <p>Fiyat: 749 TL</p>
+        <a href="#" class="add-to-cart" data-team="Fenerbahçe" data-price="749">Sepete Ekle</a>
+    </div>
+
+    <!-- Beşiktaş -->
+    <div class="team">
+        <img src="https://cdnh.kartalyuvasi.com.tr/mnresize/900/-/kartalyuvasi/UPLOAD/PRODUCTS/5KS4E0100001-50_1.jpg" alt="Beşiktaş Forma">
+        <h2>Beşiktaş</h2>
+        <p>2024 Sezonu Forma - Home</p>
+        <p>Fiyat: 799 TL</p>
+        <a href="#" class="add-to-cart" data-team="Beşiktaş" data-price="799">Sepete Ekle</a>
+    </div>
+
+    <!-- Trabzonspor -->
+    <div class="team">
+        <img src="https://cdn.myikas.com/images/03378a4e-19de-4a47-a36a-910e858fcdd5/00eae03b-b367-4863-94b9-9a858849542c/1080/4070x.webp" alt="Trabzonspor Forma">
+        <h2>Trabzonspor</h2>
+        <p>2024 Sezonu Forma - Home</p>
+        <p>Fiyat: 749 TL</p>
+        <a href="#" class="add-to-cart" data-team="Trabzonspor" data-price="749">Sepete Ekle</a>
+    </div>
+
+    <!-- Başakşehir -->
+    <div class="team">
+        <img src="https://cdn03.ciceksepeti.com/cicek/kc7676261-1/L/basaksehir-turuncu-forma-bs-3465-kc7676261-1-c1209ba20b16481abfda9bac4c56e428.jpg" alt="Başakşehir Forma">
+        <h2>Başakşehir</h2>
+        <p>2024 Sezonu Forma - Third</p>
+        <p>Fiyat: 699 TL</p>
+        <a href="#" class="add-to-cart" data-team="Başakşehir" data-price="699">Sepete Ekle</a>
+    </div>
+
+    <!-- Sivasspor -->
+    <div class="team">
+        <img src="https://cdn03.ciceksepeti.com/cicek/kc9680384-1/L/orijinal-sivasspor-cubuklu-forma-kc9680384-1-4f57e822c1fc4180917a383ba4abafef.jpg" alt="Sivasspor Forma">
+        <h2>Sivasspor</h2>
+        <p>2024 Sezonu Forma - Home</p>
+        <p>Fiyat: 699 TL</p>
+        <a href="#" class="add-to-cart" data-team="Sivasspor" data-price="699">Sepete Ekle</a>
+    </div>
+
+    <!-- Adana Demirspor -->
+    <div class="team">
+        <img src="https://cdn.myikas.com/images/0257dac9-c5be-4ba4-93e6-f0fd65c822af/f82f91af-6d4d-4127-856e-98b2aaae7e3b/3840/joma-cubuklu-forma-on.webp" alt="Adana Demirspor Forma">
+        <h2>Adana Demirspor</h2>
+        <p>2024 Sezonu Forma - Home</p>
+        <p>Fiyat: 699 TL</p>
+        <a href="#" class="add-to-cart" data-team="Adana Demirspor" data-price="699">Sepete Ekle</a>
+    </div>
+
+    <!-- Konyaspor -->
+    <div class="team">
+        <img src="https://00846a.cdn.akinoncloud.com/products/2022/10/31/246667/13f50f26-ca44-4205-9f5b-9f0d451c68f3_size972x972.jpg" alt="Konyaspor Forma">
+        <h2>Konyaspor</h2>
+        <p>2024 Sezonu Forma - Home</p>
+        <p>Fiyat: 699 TL</p>
+        <a href="#" class="add-to-cart" data-team="Konyaspor" data-price="699">Sepete Ekle</a>
+    </div>
+
+    <!-- Antalyaspor -->
+    <div class="team">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE13caIecZY5W4qxEoZ2AcY4-pzw7mmejLbQ&s" alt="Antalyaspor Forma">
+        <h2>Antalyaspor</h2>
+        <p>2024 Sezonu Forma - Home</p>
+        <p>Fiyat: 699 TL</p>
+        <a href="#" class="add-to-cart" data-team="Antalyaspor" data-price="699">Sepete Ekle</a>
+    </div>
+
+    <!-- Alanyaspor -->
+    <div class="team">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_KD9wvdSVEBm2IYCpK2FRsijSqshR3qeRQ&s" alt="Alanyaspor Forma">
+        <h2>Alanyaspor</h2>
+        <p>2024 Sezonu Forma - Home</p>
+        <p>Fiyat: 699 TL</p>
+        <a href="#" class="add-to-cart" data-team="Alanyayaspor" data-price="699">Sepete Ekle</a>
+
+        <div id="cart" class="cart">
+            <h2>Sepetim</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Takım</th>
+                        <th>Fiyat</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Sepete eklenen ürünler burada listelenecek -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Toplam</th>
+                        <th id="total-price">0 TL</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Süper Lig Forma Satış Mağazası</p>
+        </footer>
+        
+        <script>
+            const cartItems = [];
+            const cartTableBody = document.getElementById('cart-items');
+            const totalPriceElement = document.getElementById('total-price');
+        
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const team = this.getAttribute('data-team');
+                    const price = parseFloat(this.getAttribute('data-price'));
+        
+                    // Ürünü sepete ekle
+                    cartItems.push({ team, price });
+        
+                    // Sepeti güncelle
+                    updateCart();
+                });
+            });
+        
+            function updateCart() {
+                // Sepet tablosunu temizle
+                cartTableBody.innerHTML = '';
+        
+                // Toplam fiyatı sıfırla
+                let totalPrice = 0;
+        
+                // Her ürün için tablo satırı oluştur
+                cartItems.forEach(item => {
+                    const row = document.createElement('tr');
+                    const teamCell = document.createElement('td');
+                    teamCell.textContent = item.team;
+                    const priceCell = document.createElement('td');
+                    priceCell.textContent = item.price + ' TL';
+                    row.appendChild(teamCell);
+                    row.appendChild(priceCell);
+                    cartTableBody.appendChild(row);
+        
+                    // Toplam fiyatı güncelle
+                    totalPrice += item.price;
+                });
+        
+                // Toplam fiyatı göster
+                totalPriceElement.textContent = totalPrice + ' TL';
+            }
+        </script>
+        
+        </body>
+        </html>
+        
+        <!DOCTYPE html>
+        <html lang="tr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Süper Lig Forma Satış Mağazası</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f4f4f4;
+                    color: #333;
+                }
+                header {
+                    background-color: #333;
+                    padding: 20px;
+                    text-align: center;
+                    color: white;
+                }
+                header h1 {
+                    margin: 0;
+                }
+                nav {
+                    background-color: #4CAF50;
+                    padding: 10px;
+                    text-align: center;
+                }
+                nav a {
+                    color: white;
+                    text-decoration: none;
+                    margin: 0 15px;
+                    font-weight: bold;
+                }
+                .container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    padding: 20px;
+                }
+                .team {
+                    background-color: white;
+                    margin: 15px;
+                    padding: 15px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 300px;
+                    text-align: center;
+                    transition: transform 0.3s ease-in-out;
+                }
+                .team:hover {
+                    transform: scale(1.05);
+                }
+                .team img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 10px;
+                }
+                .team h2 {
+                    margin: 10px 0;
+                    color: #4CAF50;
+                }
+                .team p {
+                    font-size: 0.9em;
+                    color: #666;
+                }
+                .team a {
+                    display: inline-block;
+                    margin-top: 10px;
+                    padding: 10px 15px;
+                    background-color: #4CAF50;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 5px;
+                }
+                .team a:hover {
+                    background-color: #45a049;
+                }
+                .cart, .contact {
+                    margin: 20px auto;
+                    max-width: 900px;
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                }
+                .cart table {
+                    width: 100%;
+                    background-color: white;
+                    border-collapse: collapse;
+                }
+                .cart table, .cart th, .cart td {
+                    border: 1px solid #ddd;
+                }
+                .cart th, .cart td {
+                    padding: 10px;
+                    text-align: left;
+                }
+                .cart th {
+                    background-color: #4CAF50;
+                    color: white;
+                }
+                footer {
+                    background-color: #333;
+                    color: white;
+                    text-align: center;
+                    padding: 10px 0;
+                    position: relative;
+                    bottom: 0;
+                    width: 100%;
+                }
+                .footer-links {
+                    margin: 10px 0;
+                }
+                .footer-links a {
+                    color: #4CAF50;
+                    text-decoration: none;
+                    margin: 0 10px;
+                }
+                .footer-links a:hover {
+                    text-decoration: underline;
+                }
+
+              
+                
+            </style>
+        </head>
+        <body>
+
+            <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satın Alma Butonu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .buy-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .buy-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ürünü Satın Al</h2>
+    <p>Bu ürünü satın almak için aşağıdaki butona tıklayın:</p>
+    <button class="buy-button" onclick="window.location.href='odeme.html'">Satın Al</button>
+</body>
+</html>
+
+
